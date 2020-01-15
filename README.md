@@ -21,7 +21,9 @@
      ```
 
   Then do
-    ```gdb restraintd the-core-file-found-from-crash
+
+    ```
+    gdb restraintd the-core-file-found-from-crash
     ```
 
    When you execute this the first time it will fail as you are missing
@@ -50,7 +52,7 @@
     source ${your-root-dir}/gdb/scripts/gdb_set_env
     source ${your-root-dir}/gdb/scripts/gdb_peruse_recipe_task
     source ${your-root-dir}/gdb/scripts/gdb_peruse_glib
-   ```
+    ```
 
    The first script should always be sourced since the other scripts
    may depend on it.  The environment scripts contains functions
