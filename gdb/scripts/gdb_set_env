@@ -1,0 +1,37 @@
+#========================================================
+# File: gdb_set_env
+#
+# Contains gdb functions used to set gdb environment.
+# Other gdb files depend on this file being loaded.
+#
+# See README for introduction on how to use.
+#
+#========================================================
+
+define setup_env
+  set print pretty
+end
+
+#
+# enable_logging
+#
+# Run this script when running scripts which dump
+# memory and you want output put into an external
+# file (name gdb.output)
+#
+define enable_logging
+    printf "Log output in gdb.output file in current directory\n"
+    set pagination off
+    set logging file gdb.output
+    set logging on
+end
+
+#
+# disable_logging
+#
+# To stop logging to external file.
+#
+define disable_logging
+    set pagination on
+    set logging off
+end
