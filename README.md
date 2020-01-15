@@ -1,14 +1,17 @@
 GDB Scripts
 -----------
 
-* `Audience:`
+* `Audience`
+
    This section is written for those with entry level understanding of GDB.
 
-* `Introduction:`
+* `Introduction`
+
    This repo contains gdb scripts to peruse memory of restraintd.  It is
    especially useful to derive data from memory as a result of a crash.
 
-*  `Steps if restraintd crashed:`
+*  `Steps if restraintd crashed`
+
    If restraintd crashes, you gather the core file and prepare an
    environment similar to that which restraint crashed. So if the crash
    occured in RHEL7, then you install a machine with RHEL7 and same
@@ -33,10 +36,11 @@ GDB Scripts
 
    Restart gdb once the debuginfo is installed.
 
-* `Setup and Use of gdb scripts:`
+* `Setup and Use of gdb scripts`
+
    Clone this repo containing the gdb scripts.  Scripts can be found
    in directory `scripts`.  Sample output can be found in  `sample_out`.
-   In gdb, do the following:
+   In gdb, do the following to pull the scripts into your environment.
 
       `source ${your-root-dir}/gdb/scripts/gdb_set_env`
       `source ${your-root-dir}/gdb/scripts/gdb_peruse_recipe_task`
@@ -52,7 +56,7 @@ GDB Scripts
    see the backtrace, then run 'up 10' for example to point
    yourself to the function with visibility.
 
-   From there, you can run the scripts like the following:
+   From there, you can run the scripts like the following.
 
       `print_all_app_data app_data`
 
